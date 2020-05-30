@@ -16,7 +16,7 @@ class SignUp extends React.Component{
         }
     }
 
-    handelSubmit = async event =>{
+    handleSubmit = async event =>{
         event.preventDefault();
         const {displayName, email, password, confirmPassword}= this.state;
 
@@ -55,8 +55,8 @@ class SignUp extends React.Component{
             <div className= 'sign-up'>
                 <h2 className='title'> I do not have a account</h2>
                 <span>Sign up with your email and password</span>
-                <form className='sign-up-form' onSubmit={this.handelSubmit}>
-                    <FormInput type = 'text'  name= 'displayName' value={displayName} onChange={this.handleChange} label ='Diplay Name' required />
+                <form className='sign-up-form' onSubmit={this.handleSubmit}>
+                    <FormInput type = 'text'  name= 'displayName' value={displayName} onChange={this.handleChange} label ='Display Name' required />
                     <FormInput type = 'text'  name= 'email' value={email} onChange={this.handleChange} label ='Email' required />
                     <FormInput type = 'password'  name= 'password' value={password} onChange={this.handleChange} label ='Password' required />
                     <FormInput type = 'password'  name= 'confirmPassword' value={confirmPassword} onChange={this.handleChange} label ='Confirm Password' required />
